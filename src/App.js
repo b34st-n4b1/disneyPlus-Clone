@@ -13,13 +13,14 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/login">
+          <Route exact path="/">
             <Login />
           </Route>
-          <Route path="/detail/:id">
+
+          <Route exact path="/detail/:id">
             <Detail />
           </Route>
-          <Route path="/">
+          <Route exact path="/home">
             <Home />
           </Route>
         </Switch>

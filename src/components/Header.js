@@ -48,7 +48,7 @@ const Header = () => {
   const signOut = () => {
     auth.signOut().then(() => {
       dispatch(setSignOut());
-      history.push("/login");
+      history.push("/");
     });
   };
 
@@ -114,6 +114,10 @@ const Nav = styled.nav`
   align-items: center;
   padding: 0 36px;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    /* display: none; */
+  }
 `;
 
 const Logo = styled.img`
@@ -163,6 +167,9 @@ const NavMenu = styled.div`
         transform: ScaleX(1);
         opacity: 1;
       }
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 `;
